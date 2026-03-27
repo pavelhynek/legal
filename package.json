@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "dev": "concurrently \"npm run dev:css\" \"npm run dev:serve\"",
+    "dev:css": "chokidar \"main.css\" \"styles/**/*.css\" \"styles/**/*.scss\" \"**/*.html\" -c \"npm run build\" --initial",
+    "dev:serve": "browser-sync start --server --files \"index.html,dist/main.css\" --no-open --port 3000",
+    "build": "tailwindcss -i ./main.css -o ./dist/main.css --minify"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "browser-sync": "^3.0.3",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.0.1"
+  }
+}

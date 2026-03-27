@@ -1,0 +1,45 @@
+@config "./tailwind.config.js";
+@import "tailwindcss";
+
+@theme {
+	--breakpoint-stage2: 62rem;
+	--breakpoint-stage3: 120rem;
+}
+
+.header {
+	background-image: url("/images/Header Mobile 991px.webp");
+	background-image: -webkit-image-set(
+		url("/images/Header Mobile 991px.webp") 1x,
+		url("/images/Header Mobile 991px-ret.webp") 2x
+	);
+	background-image: image-set(
+		url("/images/Header Mobile 991px.webp") 1x,
+		url("/images/Header Mobile 991px-ret.webp") 2x
+	);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@media (min-width: 62rem) {
+	.header {
+		background-image: url("/images/Header Desktop 1920px.webp");
+		background-image: -webkit-image-set(
+			url("/images/Header Desktop 1920px.webp") 1x,
+			url("/images/Header Desktop 1920px-ret.webp") 2x
+		);
+		background-image: image-set(
+			url("/images/Header Desktop 1920px.webp") 1x,
+			url("/images/Header Desktop 1920px-ret.webp") 2x
+		);
+	}
+}
+
+.badge {
+	@apply py-1 px-3 rounded-lg mr-2 last:mr-0 text-[14px]/[20px] font-medium inline-block;
+	background-color: rgba(33, 150, 83, 0.4);
+}
+
+.button {
+	@apply py-3 px-5 rounded-lg text-[16px]/[24px] font-medium inline-block bg-[#219653] text-white;
+}
