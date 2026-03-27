@@ -7,14 +7,14 @@
 }
 
 .header {
-	background-image: url("../images/Header Mobile 991px.webp");
+	background-image: url("../images/header-mobile-991px.webp");
 	background-image: -webkit-image-set(
-		url("../images/Header Mobile 991px.webp") 1x,
-		url("../images/Header Mobile 991px-ret.webp") 2x
+		url("../images/header-mobile-991px.webp") 1x,
+		url("../images/header-mobile-991px-ret.webp") 2x
 	);
 	background-image: image-set(
-		url("../images/Header Mobile 991px.webp") 1x,
-		url("../images/Header Mobile 991px-ret.webp") 2x
+		url("../images/header-mobile-991px.webp") 1x,
+		url("../images/header-mobile-991px-ret.webp") 2x
 	);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -23,14 +23,14 @@
 
 @media (min-width: 62rem) {
 	.header {
-		background-image: url("../images/Header Desktop 1920px.webp");
+		background-image: url("../images/header-desktop-1920px.webp");
 		background-image: -webkit-image-set(
-			url("../images/Header Desktop 1920px.webp") 1x,
-			url("../images/Header Desktop 1920px-ret.webp") 2x
+			url("../images/header-desktop-1920px.webp") 1x,
+			url("../images/header-desktop-1920px-ret.webp") 2x
 		);
 		background-image: image-set(
-			url("../images/Header Desktop 1920px.webp") 1x,
-			url("../images/Header Desktop 1920px-ret.webp") 2x
+			url("../images/header-desktop-1920px.webp") 1x,
+			url("../images/header-desktop-1920px-ret.webp") 2x
 		);
 	}
 }
