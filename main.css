@@ -36,10 +36,65 @@
 }
 
 .badge {
-	@apply py-1 px-3 rounded-lg mr-2 last:mr-0 text-[14px]/[20px] font-medium inline-block;
+	@apply py-1 px-3 rounded-lg mr-2 last:mr-0 text-h6 font-medium inline-block;
 	background-color: rgba(33, 150, 83, 0.4);
 }
 
+.card {
+	@apply bg-white rounded-lg p-6 pt-8 pb-12 border-brand-green border mb-6;
+
+	&.primary {
+		background-color: rgba(45, 203, 72, 0.1);
+	}
+}
+
 .button {
-	@apply py-3 px-5 rounded-lg text-[16px]/[24px] font-medium inline-block bg-[#219653] text-white;
+	@apply py-3 px-5 rounded-lg text-h5 font-medium inline-block bg-brand-green text-white;
+}
+
+.bullet-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+.bullet-list li {
+	padding-left: 1.5rem;
+	position: relative;
+}
+
+.bullet-list li::before {
+	content: "»";
+	color: #219653;
+	position: absolute;
+	left: 0;
+}
+
+.chess-image {
+	width: 100%;
+	min-height: 360px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-image: -webkit-image-set(
+		url("../images/chess-mobile-991px.webp?v=1") 1x,
+		url("../images/chess-mobile-991px-ret.webp?v=1") 2x
+	);
+	background-image: image-set(
+		url("../images/chess-mobile-991px.webp?v=1") 1x,
+		url("../images/chess-mobile-991px-ret.webp?v=1") 2x
+	);
+}
+
+@media (min-width: 62rem) {
+	.chess-image {
+		min-height: 500px;
+		background-image: -webkit-image-set(
+			url("../images/chess-desktop-1920px.webp?v=1") 1x,
+			url("../images/chess-desktop-1920px-ret.webp?v=1") 2x
+		);
+		background-image: image-set(
+			url("../images/chess-desktop-1920px.webp?v=1") 1x,
+			url("../images/chess-desktop-1920px-ret.webp?v=1") 2x
+		);
+	}
 }

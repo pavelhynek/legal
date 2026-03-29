@@ -1,88 +1,41 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	theme: {
-		extend: {
-			fontFamily: {
-				inter: ['"Inter"', 'system-ui', '-apple-system'],
-			},
-			fontSize: {
-				hidden: [
-					'0',
-					{
-						letterSpacing: '0',
-						lineHeight: '0',
-					},
-				],
-				'3xs': [
-					'.625rem',
-					{
-						letterSpacing: '.01rem',
-						lineHeight: '1rem',
-					},
-				],
-				'2xs': [
-					'.75rem',
-					{
-						lineHeight: '1rem',
-					},
-				],
-				xs: [
-					'.875rem',
-					{
-						letterSpacing: '-0.003rem',
-						lineHeight: '1.5rem',
-					},
-				],
-				sm: [
-					'.9375rem',
-					{
-						letterSpacing: '-0.008rem',
-						lineHeight: '1.625rem',
-					},
-				],
-				base: [
-					'1rem',
-					{
-						letterSpacing: '-0.016rem',
-						lineHeight: '1.75rem',
-					},
-				],
-				lg: [
-					'1.125rem',
-					{
-						letterSpacing: '-0.019rem',
-						lineHeight: '1.875rem',
-					},
-				],
-				xl: [
-					'1.375rem',
-					{
-						letterSpacing: '-0.0269rem',
-						lineHeight: '2rem',
-					},
-				],
-				'2xl': [
-					'1.75rem',
-					{
-						letterSpacing: '-0.031rem',
-						lineHeight: '2.5rem',
-					},
-				],
-				'3xl': [
-					'32px',
-					{
-						letterSpacing: '-0.4px',
-						lineHeight: '38px',
-					},
-				],
-				'4xl': [
-					'2.75rem',
-					{
-						letterSpacing: '-0.0781rem',
-						lineHeight: '3.75rem',
-					},
-				],
-			},
-		},
-	},
+  theme: {
+    extend: {
+      fontFamily: {
+        inter: ['"Inter"', "system-ui", "-apple-system"],
+      },
+
+      colors: {
+        brand: {
+          // Zelená
+          "green": "#219653", // primary
+          "green-dark": "#00642B", // hover / dark variant
+          "green-light": "#2DCB48", // accent / highlight
+
+          // Neutrální
+          "white": "#FFFFFF",
+          "gray": "#F2F2F2", // pozadí / surface
+          "gray-mid": "#E0E0E0", // border
+          "gray-dark": "#4F4F4F", // sekundární text
+          "dark": "#333333", // hlavní text
+        },
+      },
+
+      // ── TYPOGRAFIE ───────────────────────────
+      fontSize: {
+        // [velikost, { lineHeight }]
+        "h1": ["40px", { lineHeight: "48px", fontWeight: "700" }],
+        "h2": ["32px", { lineHeight: "38px", fontWeight: "700" }],
+        "h3": ["24px", { lineHeight: "32px", fontWeight: "700" }],
+        "h4": ["18px", { lineHeight: "28px", fontWeight: "600" }],
+        "h5": ["16px", { lineHeight: "24px", fontWeight: "600" }],
+        "h6": ["14px", { lineHeight: "20px", fontWeight: "500" }],
+        "body-lg": ["18px", { lineHeight: "28px" }],
+        "body": ["16px", { lineHeight: "24px" }],
+        "body-sm": ["14px", { lineHeight: "20px" }],
+        "caption": ["12px", { lineHeight: "20px" }],
+      },
+    },
+  },
 };

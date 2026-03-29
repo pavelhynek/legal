@@ -3,24 +3,131 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Legal UI starter page powered by Tailwind CSS with live-reload development workflow." />
+    <meta
+      name="description"
+      content="Legal UI starter page powered by Tailwind CSS with live-reload development workflow."
+    />
     <title>Legal UI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./dist/main.css?v=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <link
+      rel="preload"
+      href="./dist/main.css?v=1"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="./dist/main.css?v=1" />
+    </noscript>
   </head>
   <body class="font-inter">
     <main class="">
       <section class="header text-white px-8 pb-12 pt-84 min-h-172">
-        <h1 class="font-bold text-3xl mb-5">Synek Legal advokátní kancelář</h1>
-        <div class="mb-5">
-          <span class="badge">Trestní právo</span>
-          <span class="badge">Rodina</span>
-          <span class="badge">Nemovitosti</span>
+        <div class="max-w-275 mx-auto">
+          <div class="stage2:max-w-1/2">
+            <h1 class="text-h1 mb-5">Synek Legal advokátní kancelář</h1>
+            <div class="mb-5">
+              <span class="badge">Trestní právo</span>
+              <span class="badge">Rodina</span>
+              <span class="badge">Nemovitosti</span>
+            </div>
+            <p class="text-body mb-10 tracking-[0.1px]">
+              Pomůžeme vám zorientovat se a navrhneme další postup. Vysvětlíme
+              možnosti i rizika, srozumitelně a na rovinu.
+            </p>
+            <a class="button" href="#">S čím vám můžeme pomoct</a>
+          </div>
         </div>
-        <p class="text-[16px]/[24px] mb-10 tracking-[0.1px]">Pomůžeme vám zorientovat se a navrhneme další postup. Vysvětlíme možnosti i rizika, srozumitelně a na rovinu.</p>
-        <a class="button" href="#">S čím vám můžeme pomoct</a>
+      </section>
+      <section class="px-8 mb-12">
+        <div class="chess-image"></div>
+        <p class="">
+          <strong class="font-semibold"
+            >Jsem advokát s více než 20 lety praxe. Pomáhám lidem i firmám v
+            situacích, kdy je potřeba se rychle zorientovat, mít jasno v
+            možnostech a zvolit správný další krok.</strong
+          >
+          <br /><br />
+          Vše vysvětluji srozumitelně a přímo, co je možné udělat, jaká jsou
+          rizika a jaký postup považuji za nejrozumnější. Je-li to potřeba,
+          převezmu komunikaci i jednání za vás a dohlédnu na to, aby vše
+          proběhlo správně.
+          <br /><br />
+          Ozvěte se i ve chvíli, kdy si nejste jistí, zda už je to „na
+          právníka“. Stručně si řekneme, co řešíte, a domluvíme se na dalším
+          postupu, osobně nebo na dálku.
+          <br /><br />
+          Mgr. Miroslav Synek <br />
+          Advokát od 2002 • ČAK 09503
+        </p>
+      </section>
+      <section class="px-8 mb-12 bg-brand-gray pt-12 pb-12">
+        <h2 class="text-h2 font-bold mb-2">S čím vám pomůžeme</h2>
+        <div class="mb-6 tracking-[0.1px]">
+          Nejčastější situace, se kterými pomáháme.
+        </div>
+        <div>
+          <div class="card">
+            <h3 class="text-h3 font-semibold mb-1">Trestní právo</h3>
+            <p class="text-body tracking-[0.1px]">
+              Když jde o výslech, obvinění nebo trestní řízení, zastoupíme vás a
+              řekneme, co dělat.
+            </p>
+            <br />
+            <ul class="bullet-list">
+              <li>předvolání na policii, obvinění, výslech</li>
+              <li>obhajoba u soudu</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 class="text-h3 font-semibold mb-1">Rodina</h3>
+            <p class="text-body tracking-[0.1px]">
+              Pomůžeme vám najít dohodu, nebo vás zastoupíme, když to bez právníka nejde.
+            </p>
+            <br />
+            <ul class="bullet-list">
+              <li>rozvod a dohoda mezi manžely</li>
+              <li>děti: péče, výživné, dohody</li>
+              <li>majetkové vypořádání</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 class="text-h3 font-semibold mb-1">Nemovitosti</h3>
+            <p class="text-body tracking-[0.1px]">
+              Ať kupujete, prodáváte nebo řešíte nájem, zkontrolujeme, sepíšeme smlouvy a pohlídáme rizika.
+            </p>
+            <br />
+            <ul class="bullet-list">
+              <li>koupě nebo prodej bytu či domu</li>
+              <li>nájemní smlouvy a spory</li>
+              <li>věcná břemena, SVJ</li>
+            </ul>
+          </div>
+          <div class="card primary">
+            <h3 class="text-h3 font-semibold mb-1">Pro firmy</h3>
+            <p class="text-body tracking-[0.1px]">
+              Když potřebujete podporu, pomůžeme se smlouvami, změnami ve společnosti a dohlédneme na vše.
+            </p>
+            <br />
+            <ul class="bullet-list">
+              <li>založení a změny společnosti</li>
+              <li>smlouvy a interní nastavení</li>
+              <li>valné hromady, obchodní rejstřík, spory</li>
+            </ul>
+          </div>
+        </div>
       </section>
     </main>
   </body>
