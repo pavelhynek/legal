@@ -1,15 +1,6 @@
 @config "./tailwind.config.js";
 @import "tailwindcss";
 
-/* Reduce font loading layout shift using font-display and font metrics */
-@font-face {
-	font-family: 'Inter';
-	font-display: swap;
-	src: url('https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3m4mHiHAc5v.woff2') format('woff2');
-	font-weight: 400 900;
-	descendant-override-metrics: from-font;
-}
-
 
 @theme {
 	--breakpoint-stage2: 62rem;
