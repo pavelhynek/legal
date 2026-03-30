@@ -124,10 +124,10 @@
 /* ── SEAL IMAGE ──────────────────────────────── */
 .seal-image {
 	width: 100%;
-	min-height: 280px;
+	min-height: 400px;
 	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
+	background-size: 80%;
+	background-position: center center;
 	background-image: -webkit-image-set(
 		url("../images/seal-desktop-1920px.webp?v=1") 1x,
 		url("../images/seal-desktop-1920px-ret.webp?v=1") 2x
@@ -136,6 +136,13 @@
 		url("../images/seal-desktop-1920px.webp?v=1") 1x,
 		url("../images/seal-desktop-1920px-ret.webp?v=1") 2x
 	);
+}
+
+@media (min-width: 62rem) {
+	.seal-image {
+		min-height: 380px;
+		background-size: 85%;
+	}
 }
 
 /* ── SECTION WRAPPER ─────────────────────────── */
