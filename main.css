@@ -1,153 +1,151 @@
 @config "./tailwind.config.js";
 @import "tailwindcss";
 
-
 @theme {
-	--breakpoint-stage2: 62rem;
-	--breakpoint-stage3: 120rem;
+  --breakpoint-stage2: 62rem;
+  --breakpoint-stage3: 120rem;
 }
 
 /* ── HEADER ─────────────────────────────────── */
 .header {
-	background-image: url("../images/header-mobile-991px.webp?v=1");
-	background-image: -webkit-image-set(
-		url("../images/header-mobile-991px.webp?v=1") 1x,
-		url("../images/header-mobile-991px-ret.webp?v=1") 2x
-	);
-	background-image: image-set(
-		url("../images/header-mobile-991px.webp?v=1") 1x,
-		url("../images/header-mobile-991px-ret.webp?v=1") 2x
-	);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+  background-image: url("../images/header-mobile-991px.webp?v=1");
+  background-image: -webkit-image-set(
+    url("../images/header-mobile-991px.webp?v=1") 1x,
+    url("../images/header-mobile-991px-ret.webp?v=1") 2x
+  );
+  background-image: image-set(
+    url("../images/header-mobile-991px.webp?v=1") 1x,
+    url("../images/header-mobile-991px-ret.webp?v=1") 2x
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media (min-width: 62rem) {
-	.header {
-		background-image: url("../images/header-desktop-1920px.webp?v=1");
-		background-image: -webkit-image-set(
-			url("../images/header-desktop-1920px.webp?v=1") 1x,
-			url("../images/header-desktop-1920px-ret.webp?v=1") 2x
-		);
-		background-image: image-set(
-			url("../images/header-desktop-1920px.webp?v=1") 1x,
-			url("../images/header-desktop-1920px-ret.webp?v=1") 2x
-		);
-	}
+  .header {
+    background-image: url("../images/header-desktop-1920px.webp?v=1");
+    background-image: -webkit-image-set(
+      url("../images/header-desktop-1920px.webp?v=1") 1x,
+      url("../images/header-desktop-1920px-ret.webp?v=1") 2x
+    );
+    background-image: image-set(
+      url("../images/header-desktop-1920px.webp?v=1") 1x,
+      url("../images/header-desktop-1920px-ret.webp?v=1") 2x
+    );
+  }
 
-	.header-inner {
-		max-width: 30%;
-	}
+  .header-inner {
+    max-width: 30%;
+  }
 }
 
 /* ── BADGE ───────────────────────────────────── */
 .badge {
-	@apply py-1 px-3 rounded-lg mr-2 last:mr-0 text-h6 font-medium inline-block;
-	background-color: rgba(33, 150, 83, 0.4);
+  @apply py-1 px-3 rounded-lg mr-2 last:mr-0 text-h6 font-medium inline-block;
+  background-color: rgba(33, 150, 83, 0.4);
 }
 
 /* ── CARDS ───────────────────────────────────── */
 .card {
-	@apply bg-white rounded-lg p-6 pt-8 pb-12 border-brand-green border mb-6;
+  @apply bg-white rounded-lg p-6 pt-8 pb-12 border-brand-green border mb-6;
 
-	&.primary {
-		background-color: rgba(45, 203, 72, 0.1);
-	}
+  &.primary {
+    background-color: rgba(45, 203, 72, 0.1);
+  }
 }
 
 /* ── BUTTON ──────────────────────────────────── */
 .button {
-	@apply py-3 px-5 rounded-lg text-h5 font-medium inline-block bg-brand-green text-white;
-	transition: background-color 0.2s ease;
+  @apply py-3 px-5 rounded-lg text-h5 font-medium inline-block bg-brand-green text-white;
+  transition: background-color 0.2s ease;
 
-	&:hover {
-		background-color: #00642B;
-	}
+  &:hover {
+    background-color: #00642b;
+  }
 }
 
 /* ── BULLET LIST ─────────────────────────────── */
 .bullet-list {
-	list-style: none;
-	padding-left: 0;
+  list-style: none;
+  padding-left: 0;
 }
 
 .bullet-list li {
-	padding-left: 1.5rem;
-	position: relative;
+  padding-left: 1.5rem;
+  position: relative;
 }
 
 .bullet-list li::before {
-	content: "»";
-	color: #219653;
-	position: absolute;
-	left: 0;
+  content: "»";
+  color: #219653;
+  position: absolute;
+  left: 0;
 }
 
 /* ── TEXT UTILITY ────────────────────────────── */
 .text-text {
-	@apply text-body text-brand-dark tracking-[0.1px];
+  @apply text-body text-brand-dark tracking-[0.1px];
 }
 
 /* ── CHESS IMAGE ─────────────────────────────── */
 .chess-image {
-	width: 100%;
-	min-height: 360px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-image: -webkit-image-set(
-		url("../images/chess-mobile-991px.webp?v=1") 1x,
-		url("../images/chess-mobile-991px-ret.webp?v=1") 2x
-	);
-	background-image: image-set(
-		url("../images/chess-mobile-991px.webp?v=1") 1x,
-		url("../images/chess-mobile-991px-ret.webp?v=1") 2x
-	);
+  width: 100%;
+  min-height: 360px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: -webkit-image-set(
+    url("../images/chess-mobile-991px.webp?v=1") 1x,
+    url("../images/chess-mobile-991px-ret.webp?v=1") 2x
+  );
+  background-image: image-set(
+    url("../images/chess-mobile-991px.webp?v=1") 1x,
+    url("../images/chess-mobile-991px-ret.webp?v=1") 2x
+  );
 }
 
 @media (min-width: 62rem) {
-	.chess-image {
-		min-height: 100%;
-		min-width: 420px;
-		background-image: -webkit-image-set(
-			url("../images/chess-desktop-1920px.webp?v=1") 1x,
-			url("../images/chess-desktop-1920px-ret.webp?v=1") 2x
-		);
-		background-image: image-set(
-			url("../images/chess-desktop-1920px.webp?v=1") 1x,
-			url("../images/chess-desktop-1920px-ret.webp?v=1") 2x
-		);
-	}
+  .chess-image {
+    min-height: 100%;
+    background-image: -webkit-image-set(
+      url("../images/chess-desktop-1920px.webp?v=1") 1x,
+      url("../images/chess-desktop-1920px-ret.webp?v=1") 2x
+    );
+    background-image: image-set(
+      url("../images/chess-desktop-1920px.webp?v=1") 1x,
+      url("../images/chess-desktop-1920px-ret.webp?v=1") 2x
+    );
+  }
 }
 
 /* ── SEAL IMAGE ──────────────────────────────── */
 .seal-image {
-	width: 100%;
-	min-height: 400px;
-	background-repeat: no-repeat;
-	background-size: 80%;
-	background-position: center center;
-	background-image: -webkit-image-set(
-		url("../images/seal-desktop-1920px.webp?v=1") 1x,
-		url("../images/seal-desktop-1920px-ret.webp?v=1") 2x
-	);
-	background-image: image-set(
-		url("../images/seal-desktop-1920px.webp?v=1") 1x,
-		url("../images/seal-desktop-1920px-ret.webp?v=1") 2x
-	);
+  width: 100%;
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  background-image: -webkit-image-set(
+    url("../images/seal-desktop-1920px.webp?v=1") 1x,
+    url("../images/seal-desktop-1920px-ret.webp?v=1") 2x
+  );
+  background-image: image-set(
+    url("../images/seal-desktop-1920px.webp?v=1") 1x,
+    url("../images/seal-desktop-1920px-ret.webp?v=1") 2x
+  );
 }
 
 @media (min-width: 62rem) {
-	.seal-image {
-		min-height: 380px;
-		background-size: 85%;
-	}
+  .seal-image {
+    min-height: 380px;
+    background-size: 85%;
+  }
 }
 
 /* ── SECTION WRAPPER ─────────────────────────── */
 .section-inner {
-	@apply max-w-275 mx-auto;
+  @apply max-w-275 mx-auto;
 }
 
 /* ══════════════════════════════════════════════
@@ -156,82 +154,81 @@
 
 /* Bio section: chess image left + text right */
 .bio-layout {
-	display: block;
+  display: block;
 }
 
 @media (min-width: 62rem) {
-	.bio-layout {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 0;
-		align-items: stretch;
-		min-height: 500px;
-	}
+  .bio-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+  }
 }
 
 /* Services: 1 col mobile → 2 col tablet → 4 col desktop */
 .services-grid {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
 @media (min-width: 40rem) {
-	.services-grid {
-		grid-template-columns: repeat(2, 1fr);
-	}
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 62rem) {
-	.services-grid {
-		grid-template-columns: repeat(4, 1fr);
-	}
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-	.services-grid .card {
-		margin-bottom: 0;
-	}
+  .services-grid .card {
+    margin-bottom: 0;
+  }
 }
 
 /* Process steps: 1 col mobile → 3 col desktop */
 .process-grid {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
 @media (min-width: 62rem) {
-	.process-grid {
-		grid-template-columns: repeat(3, 1fr);
-	}
+  .process-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-	.process-grid .card {
-		margin-bottom: 0;
-	}
+  .process-grid .card {
+    margin-bottom: 0;
+  }
 }
 
 /* Fees section: text left + seal right */
 .fees-layout {
-	display: block;
+  display: block;
 }
 
 @media (min-width: 62rem) {
-	.fees-layout {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 4rem;
-		align-items: center;
-	}
+  .fees-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
 }
 
 /* Contact footer: 1 col mobile → 3 col desktop */
 .contact-grid {
-	display: block;
+  display: block;
 }
 
 @media (min-width: 62rem) {
-	.contact-grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 3rem;
-	}
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
 }

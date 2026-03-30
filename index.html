@@ -65,10 +65,11 @@
       </header>
 
       <!-- ══ BIO ════════════════════════════════════════════ -->
-      <section class="mb-0 overflow-hidden">
+      <section class="mb-0 overflow-hidden section-inner">
         <div class="bio-layout">
           <!-- Text — vlevo na desktopu -->
           <div class="px-8 py-12 bg-white">
+            <div class="chess-image mb-6 stage2:hidden"></div>
             <div class="max-w-xl">
               <p class="text-text">
                 <strong class="font-semibold"
@@ -91,8 +92,6 @@
               <p class="text-text mt-1">Advokát od 2002 • ČAK 09503</p>
             </div>
           </div>
-          <!-- Chess photo — vpravo na desktopu -->
-          <div class="chess-image"></div>
         </div>
       </section>
 
@@ -399,16 +398,16 @@
       <!-- ══ DOWNLOAD BANNER ════════════════════════════════ -->
       <section class="px-8 bg-brand-gray-mid py-12">
         <div class="section-inner">
-          <div class="flex justify-between items-center">
+          <div class="flex justify-between items-center stage2:justify-normal">
             <a
               href="#"
               class="text-h6 underline text-brand-gray-dark items-center gap-2 mr-2"
             >
-              Mimosoudní řešení sporu dle zákona <br />
+              Mimosoudní řešení sporu dle zákona <br class="stage2:hidden" />
               o&nbsp;ochraně spotřebitele (PDF 25 kB)
             </a>
             <svg
-              class="shrink-0"
+              class="shrink-0 stage2:-order-1 stage2:mr-8 stage2:w-6 stage2:h-6"
               width="40"
               height="40"
               viewBox="0 0 24 24"
