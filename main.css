@@ -7,6 +7,7 @@
 	--breakpoint-stage3: 120rem;
 }
 
+/* ── HEADER ─────────────────────────────────── */
 .header {
 	background-image: url("../images/header-mobile-991px.webp?v=1");
 	background-image: -webkit-image-set(
@@ -34,13 +35,19 @@
 			url("../images/header-desktop-1920px-ret.webp?v=1") 2x
 		);
 	}
+
+	.header-inner {
+		max-width: 30%;
+	}
 }
 
+/* ── BADGE ───────────────────────────────────── */
 .badge {
 	@apply py-1 px-3 rounded-lg mr-2 last:mr-0 text-h6 font-medium inline-block;
 	background-color: rgba(33, 150, 83, 0.4);
 }
 
+/* ── CARDS ───────────────────────────────────── */
 .card {
 	@apply bg-white rounded-lg p-6 pt-8 pb-12 border-brand-green border mb-6;
 
@@ -49,10 +56,17 @@
 	}
 }
 
+/* ── BUTTON ──────────────────────────────────── */
 .button {
 	@apply py-3 px-5 rounded-lg text-h5 font-medium inline-block bg-brand-green text-white;
+	transition: background-color 0.2s ease;
+
+	&:hover {
+		background-color: #00642B;
+	}
 }
 
+/* ── BULLET LIST ─────────────────────────────── */
 .bullet-list {
 	list-style: none;
 	padding-left: 0;
@@ -70,6 +84,12 @@
 	left: 0;
 }
 
+/* ── TEXT UTILITY ────────────────────────────── */
+.text-text {
+	@apply text-body text-brand-dark tracking-[0.1px];
+}
+
+/* ── CHESS IMAGE ─────────────────────────────── */
 .chess-image {
 	width: 100%;
 	min-height: 360px;
@@ -88,7 +108,8 @@
 
 @media (min-width: 62rem) {
 	.chess-image {
-		min-height: 500px;
+		min-height: 100%;
+		min-width: 420px;
 		background-image: -webkit-image-set(
 			url("../images/chess-desktop-1920px.webp?v=1") 1x,
 			url("../images/chess-desktop-1920px-ret.webp?v=1") 2x
@@ -97,5 +118,113 @@
 			url("../images/chess-desktop-1920px.webp?v=1") 1x,
 			url("../images/chess-desktop-1920px-ret.webp?v=1") 2x
 		);
+	}
+}
+
+/* ── SEAL IMAGE ──────────────────────────────── */
+.seal-image {
+	width: 100%;
+	min-height: 280px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	background-image: -webkit-image-set(
+		url("../images/seal-desktop-1920px.webp?v=1") 1x,
+		url("../images/seal-desktop-1920px-ret.webp?v=1") 2x
+	);
+	background-image: image-set(
+		url("../images/seal-desktop-1920px.webp?v=1") 1x,
+		url("../images/seal-desktop-1920px-ret.webp?v=1") 2x
+	);
+}
+
+/* ── SECTION WRAPPER ─────────────────────────── */
+.section-inner {
+	@apply max-w-275 mx-auto;
+}
+
+/* ══════════════════════════════════════════════
+   DESKTOP LAYOUTS (stage2: 62rem+)
+══════════════════════════════════════════════ */
+
+/* Bio section: chess image left + text right */
+.bio-layout {
+	display: block;
+}
+
+@media (min-width: 62rem) {
+	.bio-layout {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0;
+		align-items: stretch;
+		min-height: 500px;
+	}
+}
+
+/* Services: 1 col mobile → 2 col tablet → 4 col desktop */
+.services-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+}
+
+@media (min-width: 40rem) {
+	.services-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 62rem) {
+	.services-grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.services-grid .card {
+		margin-bottom: 0;
+	}
+}
+
+/* Process steps: 1 col mobile → 3 col desktop */
+.process-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+}
+
+@media (min-width: 62rem) {
+	.process-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.process-grid .card {
+		margin-bottom: 0;
+	}
+}
+
+/* Fees section: text left + seal right */
+.fees-layout {
+	display: block;
+}
+
+@media (min-width: 62rem) {
+	.fees-layout {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+}
+
+/* Contact footer: 1 col mobile → 3 col desktop */
+.contact-grid {
+	display: block;
+}
+
+@media (min-width: 62rem) {
+	.contact-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 3rem;
 	}
 }

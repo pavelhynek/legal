@@ -1,20 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="cs">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Legal UI starter page powered by Tailwind CSS with live-reload development workflow."
+      content="Advokátní kancelář SYNEK-LEGAL se snaží poskytovat široké spektrum právních služeb, a to jak podnikatelským subjektům ve věcech vyplývajících z podnikatelské činnosti, tak občanům při všedních i méně běžných životních situacích."
     />
-    <title>Legal UI</title>
+    <meta
+      name="keywords"
+      content="Synek Legal, advokátní kancelář, advokát, Miroslav, Synek"
+    />
+    <title>Synek Legal, advokátní kancelář</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="preload"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript>
       <link
@@ -24,19 +31,25 @@
     </noscript>
     <link
       rel="preload"
-      href="./dist/main.css?v=1"
+      href="./dist/main.css?v=2"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript>
-      <link rel="stylesheet" href="./dist/main.css?v=1" />
+      <link rel="stylesheet" href="./dist/main.css?v=2" />
     </noscript>
   </head>
+
   <body class="font-inter">
     <main class="">
-      <section class="header text-white px-8 pb-12 pt-84 min-h-172">
+
+      <!-- ══ HERO ══════════════════════════════════════════ -->
+      <header class="header text-white px-8 pb-12 pt-84 min-h-172">
         <div class="max-w-275 mx-auto">
-          <div class="stage2:max-w-1/2">
+          <div class="header-inner stage2:max-w-1/2">
             <h1 class="text-h1 mb-5">Synek Legal advokátní kancelář</h1>
             <div class="mb-5">
               <span class="badge">Trestní právo</span>
@@ -47,88 +60,487 @@
               Pomůžeme vám zorientovat se a navrhneme další postup. Vysvětlíme
               možnosti i rizika, srozumitelně a na rovinu.
             </p>
-            <a class="button" href="#">S čím vám můžeme pomoct</a>
+            <a class="button" href="#kontakt">S čím vám můžeme pomoct</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- ══ BIO ════════════════════════════════════════════ -->
+      <section class="mb-0 overflow-hidden">
+        <div class="bio-layout">
+          <!-- Chess photo — vlevo na desktopu -->
+          <div class="chess-image"></div>
+          <!-- Text — vpravo na desktopu -->
+          <div class="px-8 py-12 bg-white">
+            <div class="max-w-xl">
+              <p class="text-text">
+                <strong class="font-semibold"
+                  >Jsem advokát s více než 20 lety praxe. Pomáhám lidem i firmám v
+                  situacích, kdy je potřeba se rychle zorientovat, mít jasno v
+                  možnostech a zvolit správný další krok.</strong
+                >
+                <br /><br />
+                Vše vysvětluji srozumitelně a přímo, co je možné udělat, jaká jsou
+                rizika a jaký postup považuji za nejrozumnější. Je-li to potřeba,
+                převezmu komunikaci i jednání za vás a dohlédnu na to, aby vše
+                proběhlo správně.
+                <br /><br />
+                Ozvěte se i ve chvíli, kdy si nejste jistí, zda už je to „na
+                právníka". Stručně si řekneme, co řešíte, a domluvíme se na dalším
+                postupu, osobně nebo na dálku.
+                <br /><br />
+              </p>
+              <div class="text-h3 font-semibold">Mgr. Miroslav Synek</div>
+              <p class="text-text mt-1">Advokát od 2002 • ČAK 09503</p>
+            </div>
           </div>
         </div>
       </section>
-      <section class="px-8 mb-12">
-        <div class="chess-image"></div>
-        <p class="">
-          <strong class="font-semibold"
-            >Jsem advokát s více než 20 lety praxe. Pomáhám lidem i firmám v
-            situacích, kdy je potřeba se rychle zorientovat, mít jasno v
-            možnostech a zvolit správný další krok.</strong
-          >
-          <br /><br />
-          Vše vysvětluji srozumitelně a přímo, co je možné udělat, jaká jsou
-          rizika a jaký postup považuji za nejrozumnější. Je-li to potřeba,
-          převezmu komunikaci i jednání za vás a dohlédnu na to, aby vše
-          proběhlo správně.
-          <br /><br />
-          Ozvěte se i ve chvíli, kdy si nejste jistí, zda už je to „na
-          právníka“. Stručně si řekneme, co řešíte, a domluvíme se na dalším
-          postupu, osobně nebo na dálku.
-          <br /><br />
-          Mgr. Miroslav Synek <br />
-          Advokát od 2002 • ČAK 09503
-        </p>
-      </section>
-      <section class="px-8 mb-12 bg-brand-gray pt-12 pb-12">
-        <h2 class="text-h2 font-bold mb-2">S čím vám pomůžeme</h2>
-        <div class="mb-6 tracking-[0.1px]">
-          Nejčastější situace, se kterými pomáháme.
+
+      <!-- ══ SERVICES ═══════════════════════════════════════ -->
+      <section class="px-8 py-12 bg-brand-gray">
+        <div class="section-inner">
+          <h2 class="text-h2 font-bold mb-2">S čím vám pomůžeme</h2>
+          <div class="mb-6 tracking-[0.1px]">
+            Nejčastější situace, se kterými pomáháme.
+          </div>
+          <div class="services-grid">
+            <!-- Trestní právo -->
+            <div class="card">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="none"
+                class="mb-2.5"
+              >
+                <path
+                  stroke="#219653"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                  d="M33.35 30.85 25.1 22.6M25.1 22.6l-5.9 5.9a3.34 3.34 0 0 1-4.717 0l-7.067-7.067a3.34 3.34 0 0 1 0-4.716L19.2 4.933a3.34 3.34 0 0 1 4.716 0L30.983 12a3.34 3.34 0 0 1 0 4.717zM3.334 35h10M10.934 13.2l11.783 11.783"
+                />
+              </svg>
+              <h3 class="text-h3 font-semibold mb-1">Trestní právo</h3>
+              <p class="text-body tracking-[0.1px]">
+                Když jde o výslech, obvinění nebo trestní řízení, zastoupíme vás a
+                řekneme, co dělat.
+              </p>
+              <br />
+              <ul class="bullet-list">
+                <li>předvolání na policii, obvinění, výslech</li>
+                <li>obhajoba u soudu</li>
+              </ul>
+            </div>
+            <!-- Rodina -->
+            <div class="card">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="none"
+                class="mb-2.5"
+              >
+                <path
+                  stroke="#219653"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M30 11.933a1 1 0 0 0-.316 0 4.29 4.29 0 0 1-4.133-4.3 4.29 4.29 0 0 1 4.3-4.3 4.3 4.3 0 0 1 4.3 4.3 4.315 4.315 0 0 1-4.15 4.3M28.284 24.067c2.284.383 4.8-.017 6.567-1.2 2.35-1.567 2.35-4.134 0-5.7-1.783-1.184-4.333-1.584-6.617-1.184M9.95 11.933c.1-.016.217-.016.317 0a4.29 4.29 0 0 0 4.134-4.3 4.29 4.29 0 0 0-4.3-4.3 4.3 4.3 0 0 0-4.3 4.3 4.315 4.315 0 0 0 4.15 4.3M11.667 24.067c-2.283.383-4.8-.017-6.567-1.2-2.35-1.567-2.35-4.134 0-5.7 1.784-1.184 4.334-1.584 6.617-1.184M19.999 24.383a1 1 0 0 0-.317 0 4.29 4.29 0 0 1-4.133-4.3 4.29 4.29 0 0 1 4.3-4.3 4.3 4.3 0 0 1 4.3 4.3c-.017 2.334-1.85 4.234-4.15 4.3M15.15 29.633c-2.35 1.567-2.35 4.134 0 5.7 2.666 1.784 7.033 1.784 9.7 0 2.35-1.566 2.35-4.133 0-5.7-2.65-1.766-7.034-1.766-9.7 0"
+                />
+              </svg>
+              <h3 class="text-h3 font-semibold mb-1">Rodina</h3>
+              <p class="text-body tracking-[0.1px]">
+                Pomůžeme vám najít dohodu, nebo vás zastoupíme, když to bez
+                právníka nejde.
+              </p>
+              <br />
+              <ul class="bullet-list">
+                <li>rozvod a dohoda mezi manžely</li>
+                <li>děti: péče, výživné, dohody</li>
+                <li>majetkové vypořádání</li>
+              </ul>
+            </div>
+            <!-- Nemovitosti -->
+            <div class="card">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="none"
+                class="mb-2.5"
+              >
+                <path
+                  stroke="#219653"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                  d="M3.334 36.667h33.333"
+                />
+                <path
+                  stroke="#219653"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                  d="m4.916 36.667.083-20.05C5 15.6 5.483 14.633 6.283 14l11.666-9.083a3.35 3.35 0 0 1 4.1 0l11.667 9.066a3.32 3.32 0 0 1 1.283 2.634v20.05"
+                />
+                <path
+                  stroke="#219653"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                  d="M21.667 28.333h-3.333a2.497 2.497 0 0 0-2.5 2.5v5.834h8.333v-5.834c0-1.383-1.116-2.5-2.5-2.5ZM15.834 22.917h-3.333c-.917 0-1.667-.75-1.667-1.667v-2.5c0-.917.75-1.667 1.667-1.667h3.333c.917 0 1.667.75 1.667 1.667v2.5c0 .917-.75 1.667-1.667 1.667ZM27.5 22.917h-3.333c-.917 0-1.667-.75-1.667-1.667v-2.5c0-.917.75-1.667 1.667-1.667H27.5c.917 0 1.667.75 1.667 1.667v2.5c0 .917-.75 1.667-1.667 1.667Z"
+                />
+                <path
+                  stroke="#219653"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                  d="m31.667 11.667-.05-5h-7.334"
+                />
+              </svg>
+              <h3 class="text-h3 font-semibold mb-1">Nemovitosti</h3>
+              <p class="text-body tracking-[0.1px]">
+                Ať kupujete, prodáváte nebo řešíte nájem, zkontrolujeme, sepíšeme
+                smlouvy a pohlídáme rizika.
+              </p>
+              <br />
+              <ul class="bullet-list">
+                <li>koupě nebo prodej bytu či domu</li>
+                <li>nájemní smlouvy a spory</li>
+                <li>věcná břemena, SVJ</li>
+              </ul>
+            </div>
+            <!-- Pro firmy -->
+            <div class="card primary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="none"
+                class="mb-2.5"
+              >
+                <path
+                  stroke="#219653"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                  d="m20.617 3.583 15 6c.584.234 1.05.934 1.05 1.55v5.534c0 .916-.75 1.666-1.666 1.666H5c-.917 0-1.667-.75-1.667-1.666v-5.534c0-.616.467-1.316 1.05-1.55l15-6c.333-.133.9-.133 1.233 0M36.667 36.667H3.334v-5c0-.917.75-1.667 1.667-1.667h30c.916 0 1.666.75 1.666 1.667zM6.666 30V18.333M13.334 30V18.333M20 30V18.333M26.666 30V18.333M33.334 30V18.333M1.666 36.667h36.667"
+                />
+                <path
+                  stroke="#219653"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                  d="M20 14.167a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
+                />
+              </svg>
+              <h3 class="text-h3 font-semibold mb-1">Pro firmy</h3>
+              <p class="text-body tracking-[0.1px]">
+                Když potřebujete podporu, pomůžeme se smlouvami, změnami ve
+                společnosti a dohlédneme na vše.
+              </p>
+              <br />
+              <ul class="bullet-list">
+                <li>založení a změny společnosti</li>
+                <li>smlouvy a interní nastavení</li>
+                <li>valné hromady, obchodní rejstřík, spory</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8">
+            <a class="button" href="#kontakt">Domluvit konzultaci</a>
+          </div>
         </div>
-        <div>
-          <div class="card">
-            <h3 class="text-h3 font-semibold mb-1">Trestní právo</h3>
-            <p class="text-body tracking-[0.1px]">
-              Když jde o výslech, obvinění nebo trestní řízení, zastoupíme vás a
-              řekneme, co dělat.
-            </p>
-            <br />
-            <ul class="bullet-list">
-              <li>předvolání na policii, obvinění, výslech</li>
-              <li>obhajoba u soudu</li>
-            </ul>
+      </section>
+
+      <!-- ══ PROCESS ═════════════════════════════════════════ -->
+      <section class="px-8 bg-white py-12">
+        <div class="section-inner">
+          <h2 class="text-h2 font-bold mb-2">Jak to probíhá</h2>
+          <div class="mb-6 tracking-[0.1px]">
+            Krátce si zavoláme nebo napíšeme, zorientujeme se v situaci a
+            domluvíme další krok.
           </div>
-          <div class="card">
-            <h3 class="text-h3 font-semibold mb-1">Rodina</h3>
-            <p class="text-body tracking-[0.1px]">
-              Pomůžeme vám najít dohodu, nebo vás zastoupíme, když to bez právníka nejde.
-            </p>
-            <br />
-            <ul class="bullet-list">
-              <li>rozvod a dohoda mezi manžely</li>
-              <li>děti: péče, výživné, dohody</li>
-              <li>majetkové vypořádání</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3 class="text-h3 font-semibold mb-1">Nemovitosti</h3>
-            <p class="text-body tracking-[0.1px]">
-              Ať kupujete, prodáváte nebo řešíte nájem, zkontrolujeme, sepíšeme smlouvy a pohlídáme rizika.
-            </p>
-            <br />
-            <ul class="bullet-list">
-              <li>koupě nebo prodej bytu či domu</li>
-              <li>nájemní smlouvy a spory</li>
-              <li>věcná břemena, SVJ</li>
-            </ul>
-          </div>
-          <div class="card primary">
-            <h3 class="text-h3 font-semibold mb-1">Pro firmy</h3>
-            <p class="text-body tracking-[0.1px]">
-              Když potřebujete podporu, pomůžeme se smlouvami, změnami ve společnosti a dohlédneme na vše.
-            </p>
-            <br />
-            <ul class="bullet-list">
-              <li>založení a změny společnosti</li>
-              <li>smlouvy a interní nastavení</li>
-              <li>valné hromady, obchodní rejstřík, spory</li>
-            </ul>
+          <div class="process-grid">
+            <!-- Krok 1 -->
+            <div class="card mb-0!">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="none"
+                class="mb-2.5"
+              >
+                <path
+                  stroke="#219653"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                  d="M14.167 31.667h-.833c-6.667 0-10-1.667-10-10v-8.334q0-10 10-10h13.333q10 0 10 10v8.334q0 10-10 10h-.833a1.69 1.69 0 0 0-1.333.666L22 35.667c-1.1 1.466-2.9 1.466-4 0l-2.5-3.334c-.267-.366-.884-.666-1.334-.666"
+                />
+                <path
+                  stroke="#219653"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M11.666 13.333h16.667M11.666 21.667h10"
+                />
+              </svg>
+              <h3 class="text-h3 font-semibold mb-1">Ozvěte se</h3>
+              <p class="text-body tracking-[0.1px]">
+                Stačí pár vět – co se děje a co potřebujete řešit.
+              </p>
+            </div>
+            <!-- Krok 2 -->
+            <div class="card mb-0!">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="none"
+                class="mb-2.5"
+              >
+                <path
+                  stroke="#219653"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8.334 25V13.333M8.75 36.667a5.417 5.417 0 1 0 0-10.834 5.417 5.417 0 0 0 0 10.834M8.334 13.333a5 5 0 1 0 0-10 5 5 0 0 0 0 10M31.666 13.333a5 5 0 1 0 0-10 5 5 0 0 0 0 10M8.55 25c.75-2.917 3.417-5.083 6.567-5.067l5.717.017c4.367.017 8.083-2.783 9.45-6.683"
+                />
+              </svg>
+              <h3 class="text-h3 font-semibold mb-1">Navrhneme postup</h3>
+              <p class="text-body tracking-[0.1px]">
+                Řekneme vám možnosti, rizika a doporučíme nejlepší řešení.
+              </p>
+            </div>
+            <!-- Krok 3 -->
+            <div class="card mb-0!">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="none"
+                class="mb-2.5"
+              >
+                <path
+                  stroke="#219653"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                  d="M13.333 36.667h13.333c6.7 0 7.9-2.684 8.25-5.95l1.25-13.334c.45-4.066-.717-7.383-7.833-7.383H11.666c-7.117 0-8.283 3.317-7.833 7.383l1.25 13.334c.35 3.266 1.55 5.95 8.25 5.95M13.334 10V8.667c0-2.95 0-5.334 5.333-5.334h2.667c5.333 0 5.333 2.384 5.333 5.334V10"
+                />
+                <path
+                  stroke="#219653"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                  d="M23.333 21.667v1.7c0 1.816-.017 3.3-3.334 3.3-3.3 0-3.333-1.467-3.333-3.284v-1.716c0-1.667 0-1.667 1.667-1.667h3.333c1.667 0 1.667 0 1.667 1.667M36.084 18.333a27.5 27.5 0 0 1-12.75 5.034"
+                />
+                <path
+                  stroke="#219653"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                  d="M4.367 18.783c3.75 2.567 7.984 4.117 12.3 4.6"
+                />
+              </svg>
+              <h3 class="text-h3 font-semibold mb-1">Pustíme se do toho</h3>
+              <p class="text-body tracking-[0.1px]">
+                Domluvíme podmínky spolupráce a začneme jednat za vás.
+              </p>
+            </div>
           </div>
         </div>
       </section>
+
+      <!-- ══ FEES ════════════════════════════════════════════ -->
+      <section class="px-8 bg-brand-gray py-12">
+        <div class="section-inner">
+          <div class="fees-layout">
+            <!-- Text vlevo -->
+            <div>
+              <h2 class="text-h2 font-bold mb-2">Odměna</h2>
+              <p class="text-body tracking-[0.1px]">
+                Cenu si řekneme předem – podle složitosti a času. Nejčastěji účtujeme
+                hodinově, někdy jde domluvit paušál nebo odměna podle výsledku.
+              </p>
+              <h4 class="text-h4 font-semibold mt-6">Orientační hodinové sazby:</h4>
+              <p class="text-body tracking-[0.1px] mt-3">
+                trestní obhajoba<br />2 500 – 5 000 Kč/h bez DPH<br />
+                ostatní agenda<br />2 000 – 4 000 Kč/h bez DPH
+              </p>
+              <p class="text-caption text-brand-dark mt-6">
+                Poznámka:<br />U některých věcí jde domluvit paušál, ať víte dopředu,
+                na čem jste. Předem si řekneme odhad a rozsah práce.
+              </p>
+            </div>
+            <!-- Seal foto vpravo -->
+            <div class="seal-image mt-8 stage2:mt-0" style="min-height: 320px; background-position: center center;"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ DOWNLOAD BANNER ════════════════════════════════ -->
+      <section class="px-8 bg-brand-gray-mid py-12">
+        <div class="section-inner">
+          <div class="flex justify-between items-center">
+            <a
+              href="#"
+              class="text-h6 underline text-brand-gray-dark items-center gap-2 mr-2"
+            >
+              Mimosoudní řešení sporu dle zákona <br />
+              o&nbsp;ochraně spotřebitele (PDF 25 kB)
+            </a>
+            <svg
+              class="shrink-0"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="#4F4F4F"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 8.5V14.5"
+                stroke="#4F4F4F"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9 12.5L12 15.5L15 12.5"
+                stroke="#4F4F4F"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ FOOTER / KONTAKT ════════════════════════════════ -->
+      <footer
+        id="kontakt"
+        class="px-8 bg-brand-gray-dark py-12 text-white font-normal"
+      >
+        <div class="section-inner">
+          <h2 class="text-h2 mb-2">Kontakt</h2>
+          <p class="mb-8">
+            <span class="font-semibold">Napište nebo zavolejte</span> – krátce si
+            řekneme, co řešíte, a navrhneme další postup
+          </p>
+          <div class="contact-grid">
+            <!-- Kdo -->
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="none"
+                class="mb-4"
+              >
+                <path
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M30.234 36.033c-1.466.434-3.2.634-5.233.634H15c-2.033 0-3.767-.2-5.233-.634.366-4.333 4.816-7.75 10.233-7.75s9.867 3.417 10.233 7.75"
+                />
+                <path
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M25 3.333H15C6.668 3.333 3.335 6.667 3.335 15v10c0 6.3 1.9 9.75 6.433 11.033.367-4.333 4.817-7.75 10.234-7.75s9.866 3.417 10.233 7.75C34.767 34.75 36.667 31.3 36.667 25V15c0-8.333-3.333-11.667-11.666-11.667m-5 20.284c-3.3 0-5.966-2.684-5.966-5.984a5.96 5.96 0 0 1 5.967-5.966 5.96 5.96 0 0 1 5.966 5.966c0 3.3-2.666 5.984-5.966 5.984"
+                />
+                <path
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M25.967 17.633c0 3.3-2.667 5.984-5.967 5.984s-5.967-2.684-5.967-5.984A5.96 5.96 0 0 1 20 11.667a5.96 5.96 0 0 1 5.967 5.966"
+                />
+              </svg>
+              <span class="font-semibold">Mgr. Miroslav Synek</span>
+              <br />advokát<br />
+              <br />ČAK 09503 • IČ 66252997<br />
+              Datová schránka: bgrf4g
+            </div>
+            <!-- Telefon + email -->
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="none"
+                class="mb-4"
+              >
+                <path
+                  stroke="#fff"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                  d="M36.617 30.55c0 .6-.133 1.217-.416 1.817-.284.6-.65 1.166-1.134 1.7-.816.9-1.716 1.55-2.733 1.966-1 .417-2.083.634-3.25.634-1.7 0-3.517-.4-5.433-1.217-1.917-.817-3.834-1.917-5.734-3.3a48 48 0 0 1-5.466-4.667 47.4 47.4 0 0 1-4.65-5.45c-1.367-1.9-2.467-3.8-3.267-5.683q-1.2-2.85-1.2-5.45c0-1.133.2-2.217.6-3.217.4-1.016 1.033-1.95 1.917-2.783 1.066-1.05 2.233-1.567 3.466-1.567.467 0 .934.1 1.35.3.434.2.817.5 1.117.934l3.867 5.45c.3.416.516.8.666 1.166.15.35.234.7.234 1.017 0 .4-.117.8-.35 1.183-.217.384-.534.784-.934 1.184l-1.266 1.316a.9.9 0 0 0-.267.667c0 .133.017.25.05.383.05.134.1.234.133.334.3.55.817 1.266 1.55 2.133.75.867 1.55 1.75 2.417 2.633.9.884 1.767 1.7 2.65 2.45.867.734 1.583 1.234 2.15 1.534.083.033.183.083.3.133.133.05.267.067.417.067.283 0 .5-.1.683-.284l1.267-1.25c.416-.416.816-.733 1.2-.933.383-.233.766-.35 1.183-.35.317 0 .65.067 1.017.217s.75.366 1.166.65l5.517 3.916c.433.3.733.65.917 1.067.166.417.266.833.266 1.3Z"
+                />
+              </svg>
+              Zavolejte nám:<br />
+              <a href="tel:+420602404645" class="font-semibold hover:underline">+420 602 404 645</a>
+              <br /><br />
+              Napište nám:<br />
+              <a href="mailto:synek@synek-legal.cz" class="font-semibold hover:underline">synek@synek-legal.cz</a>
+            </div>
+            <!-- Adresa -->
+            <div>
+              <svg
+                class="mb-4"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.0008 22.3833C22.8727 22.3833 25.2008 20.0552 25.2008 17.1833C25.2008 14.3115 22.8727 11.9833 20.0008 11.9833C17.1289 11.9833 14.8008 14.3115 14.8008 17.1833C14.8008 20.0552 17.1289 22.3833 20.0008 22.3833Z"
+                  stroke="#fff"
+                  stroke-width="2"
+                />
+                <path
+                  d="M6.0335 14.15C9.31683 -0.28335 30.7002 -0.266683 33.9668 14.1667C35.8835 22.6333 30.6168 29.8 26.0002 34.2333C22.6502 37.4667 17.3502 37.4667 13.9835 34.2333C9.3835 29.8 4.11683 22.6166 6.0335 14.15Z"
+                  stroke="#fff"
+                  stroke-width="2"
+                />
+              </svg>
+              Navštivte nás:<br />
+              <span class="font-semibold">Balbínova 223/5<br />120 00 Praha 2</span>
+              <br /><br />
+              <a
+                href="https://maps.google.com/?q=Balbínova+223/5,+Praha+2"
+                target="_blank"
+                rel="noopener"
+                class="underline hover:text-brand-green"
+              >Zobrazit na mapě</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   </body>
 </html>

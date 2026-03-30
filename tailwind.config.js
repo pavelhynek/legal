@@ -25,6 +25,7 @@ module.exports = {
       // ── TYPOGRAFIE ───────────────────────────
       fontSize: {
         // [velikost, { lineHeight }]
+        "display": ["56px", { lineHeight: "65px", fontWeight: "700", letterSpacing: "-1px" }],
         "h1": ["40px", { lineHeight: "48px", fontWeight: "700" }],
         "h2": ["32px", { lineHeight: "38px", fontWeight: "700" }],
         "h3": ["24px", { lineHeight: "32px", fontWeight: "700" }],
