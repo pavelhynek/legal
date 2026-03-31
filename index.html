@@ -46,18 +46,21 @@
   <body class="font-inter">
     <main class="">
       <!-- ══ HERO ══════════════════════════════════════════ -->
-      <header class="header text-white px-8 pb-12 pt-84 min-h-172">
+      <header class="header text-white px-8 stage2:px-16 pb-12 pt-84 min-h-172">
         <div class="max-w-275 mx-auto">
-          <div class="header-inner stage2:max-w-1/2">
-            <h1 class="text-h1 mb-5">Synek Legal advokátní kancelář</h1>
+          <div class="stage2:max-w-1/2">
+            <h1 class="text-h2 stage2:text-display mb-5">
+              Synek Legal advokátní kancelář
+            </h1>
             <div class="mb-5">
               <span class="badge">Trestní právo</span>
               <span class="badge">Rodina</span>
               <span class="badge">Nemovitosti</span>
             </div>
             <p class="text-body mb-10 tracking-[0.1px]">
-              Pomůžeme vám zorientovat se a navrhneme další postup. Vysvětlíme
-              možnosti i rizika, srozumitelně a na rovinu.
+              Pomůžeme vám zorientovat se a navrhneme další postup.
+              <br class="hidden stage2:block" />
+              Vysvětlíme možnosti i rizika, srozumitelně a na rovinu.
             </p>
             <a class="button" href="#kontakt">S čím vám můžeme pomoct</a>
           </div>
@@ -65,38 +68,42 @@
       </header>
 
       <!-- ══ BIO ════════════════════════════════════════════ -->
-      <section class="mb-0 overflow-hidden section-inner">
-        <div class="bio-layout">
-          <!-- Text — vlevo na desktopu -->
-          <div class="px-8 py-12 bg-white">
-            <div class="chess-image mb-6 stage2:hidden"></div>
-            <div class="max-w-xl">
-              <p class="text-text">
-                <strong class="font-semibold"
-                  >Jsem advokát s více než 20 lety praxe. Pomáhám lidem i firmám
-                  v situacích, kdy je potřeba se rychle zorientovat, mít jasno v
-                  možnostech a zvolit správný další krok.</strong
-                >
-                <br /><br />
-                Vše vysvětluji srozumitelně a přímo, co je možné udělat, jaká
-                jsou rizika a jaký postup považuji za nejrozumnější. Je-li to
-                potřeba, převezmu komunikaci i jednání za vás a dohlédnu na to,
-                aby vše proběhlo správně.
-                <br /><br />
-                Ozvěte se i ve chvíli, kdy si nejste jistí, zda už je to „na
-                právníka". Stručně si řekneme, co řešíte, a domluvíme se na
-                dalším postupu, osobně nebo na dálku.
-                <br /><br />
-              </p>
-              <div class="text-h3 font-semibold">Mgr. Miroslav Synek</div>
-              <p class="text-text mt-1">Advokát od 2002 • ČAK 09503</p>
+      <div class="chess-image-desktop">
+        <div class="chess-image mt-4 mb-6 stage2:hidden"></div>
+        <section
+          class="mb-0 overflow-hidden section-inner px-8 stage2:px-16 special:px-0 stage2:my-12"
+        >
+          <div class="bio-layout">
+            <!-- Text — vlevo na desktopu -->
+            <div class="pb-12 bg-white bio-text">
+              <div class="">
+                <p class="text-text">
+                  <strong class="font-semibold"
+                    >Jsem advokát s více než 20 lety praxe. Pomáhám lidem i
+                    firmám v situacích, kdy je potřeba se rychle zorientovat,
+                    mít jasno v možnostech a zvolit správný další krok.</strong
+                  >
+                  <br /><br />
+                  Vše vysvětluji srozumitelně a přímo, co je možné udělat, jaká
+                  jsou rizika a jaký postup považuji za nejrozumnější. Je-li to
+                  potřeba, převezmu komunikaci i jednání za vás a dohlédnu na
+                  to, aby vše proběhlo správně.
+                  <br /><br />
+                  Ozvěte se i ve chvíli, kdy si nejste jistí, zda už je to „na
+                  právníka". Stručně si řekneme, co řešíte, a domluvíme se na
+                  dalším postupu, osobně nebo na dálku.
+                  <br /><br />
+                </p>
+                <div class="text-h3 font-semibold">Mgr. Miroslav Synek</div>
+                <p class="text-text mt-1">Advokát od 2002 • ČAK 09503</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <!-- ══ SERVICES ═══════════════════════════════════════ -->
-      <section class="px-8 py-12 bg-brand-gray">
+      <section class="px-8 stage2:px-16 py-12 bg-brand-gray">
         <div class="section-inner">
           <h2 class="text-h2 font-bold mb-2">S čím vám pomůžeme</h2>
           <div class="mb-6 tracking-[0.1px]">
@@ -259,7 +266,7 @@
       </section>
 
       <!-- ══ PROCESS ═════════════════════════════════════════ -->
-      <section class="px-8 bg-white py-12">
+      <section class="px-8 stage2:px-16 bg-white py-12">
         <div class="section-inner">
           <h2 class="text-h2 font-bold mb-2">Jak to probíhá</h2>
           <div class="mb-6 tracking-[0.1px]">
@@ -363,7 +370,7 @@
       </section>
 
       <!-- ══ FEES ════════════════════════════════════════════ -->
-      <section class="px-8 bg-brand-gray py-12">
+      <section class="px-8 stage2:px-16 bg-brand-gray py-12 seal-image-desktop">
         <div class="section-inner">
           <div class="fees-layout">
             <!-- Text vlevo -->
@@ -386,17 +393,12 @@
                 dopředu, na čem jste. Předem si řekneme odhad a rozsah práce.
               </p>
             </div>
-            <!-- Seal foto vpravo -->
-            <div
-              class="seal-image mt-8 stage2:mt-0 hidden stage2:block"
-              style="min-height: 320px; background-position: center center"
-            ></div>
           </div>
         </div>
       </section>
 
       <!-- ══ DOWNLOAD BANNER ════════════════════════════════ -->
-      <section class="px-8 bg-brand-gray-mid py-12">
+      <section class="px-8 stage2:px-16 bg-brand-gray-mid py-12">
         <div class="section-inner">
           <div class="flex justify-between items-center stage2:justify-normal">
             <a
@@ -444,7 +446,7 @@
       <!-- ══ FOOTER / KONTAKT ════════════════════════════════ -->
       <footer
         id="kontakt"
-        class="px-8 bg-brand-gray-dark py-12 text-white font-normal"
+        class="px-8 stage2:px-16 bg-brand-gray-dark py-12 text-white font-normal"
       >
         <div class="section-inner">
           <h2 class="text-h2 mb-2">Kontakt</h2>
