@@ -7,6 +7,16 @@
   --breakpoint-special: 1440px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 /* ── HEADER ─────────────────────────────────── */
 .header {
   background-image: url("../images/header-mobile-991px.webp?v=1");
