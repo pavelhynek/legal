@@ -12,7 +12,7 @@ html {
 }
 
 :root {
-  --anchor-offset: 1.5rem;
+  --anchor-offset: 1rem;
 }
 
 @media (min-width: 62rem) {
