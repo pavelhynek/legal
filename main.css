@@ -11,6 +11,22 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --anchor-offset: 1.5rem;
+}
+
+@media (min-width: 62rem) {
+  :root {
+    --anchor-offset: 2.5rem;
+  }
+}
+
+#criminal-law,
+#family-law,
+#real-estate-law {
+  scroll-margin-top: var(--anchor-offset);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
